@@ -1,0 +1,119 @@
+.end {
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(253, 251, 251);
+    background-color: rgba(141, 11, 135, 0.527);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: slide 12s ease-in-out infinite;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 0px rgba(128, 13, 143, 0.966), -1px -1px 10px 0px rgba(247, 4, 214, 0.5);
+    text-align: center;
+    display: inline;
+    border: none;
+    width: 500px;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    25% {
+        transform: translateX(0); /* Fully visible in the center */
+    }
+    60% {
+        transform: translateX(0) rotate(-5deg); /* Shake left */
+    }
+    70% {
+        transform: translateX(0) rotate(5deg); /* Shake right */
+    }
+    80% {
+        transform: translateX(0) rotate(-5deg); /* Shake left */
+    }
+    90% {
+        transform: translateX(0) rotate(5deg); /* Shake right */
+    }
+    100% {
+        transform: translateX(-100%); /* Slide off-screen to the left */
+    }
+    110% {
+        transform: translateX(-100%); /* Continue sliding left */
+    }
+    125% {
+        transform: translateX(100%); /* Slide back from left to right */
+    }
+}
+/* Style for the "Shop below" text */
+.shop-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start position slightly lower */
+    animation: fadeInSlideUp 1s ease-out forwards; /* Apply the animation */
+  }
+  
+  /* Keyframes for the fade-in and slide-up animation */
+  @keyframes fadeInSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start lower */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End in the original position */
+    }
+  }
+  
+  /* Style for the "Shop below" text */
+/* Style for the "Shop below" text */
+.shop-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #ff6f61; /* Initial vibrant color */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start position slightly lower */
+    animation: fadeInSlideUp 1.5s ease-out forwards, colorPulse 2s ease-in-out infinite alternate, moveUpDown 2s ease-in-out infinite; /* Apply animations */
+    letter-spacing: 2px; /* Add spacing between letters */
+  }
+  
+  /* Keyframes for the fade-in and slide-up animation */
+  @keyframes fadeInSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start lower */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End in the original position */
+    }
+  }
+  
+  /* Keyframes for a pulsing color effect */
+  @keyframes colorPulse {
+    0% {
+      color: #ff6f61; /* Initial red */
+    }
+    50% {
+      color: #00bcd4; /* Change to a vibrant cyan */
+    }
+    100% {
+      color: #ff9800; /* End with a bright orange */
+    }
+  }
+  
+  /* Keyframes for the up and down movement */
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0); /* Start at the center */
+    }
+    50% {
+      transform: translateY(-10px); /* Move up slightly */
+    }
+    100% {
+      transform: translateY(0); /* Return to the original position */
+    }
+  }
+  

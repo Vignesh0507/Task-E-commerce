@@ -1,0 +1,176 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header{
+    display: flex;
+background: rgba(141, 137, 137, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    /* box-shadow: 1px 1px 5px 0px #0d6efd, -1px -1px 5px 0px #0d6efd; */
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 1%;
+    width: 98%;
+    border-radius: 25px;
+    margin-top: 20px;
+    z-index: 999;
+    position: relative;
+    position: fixed;
+}
+.type {
+    font-weight: bold;
+    font-size: 28px; /* Increased text size for a bolder appearance */
+    color: #2c3edb; /* A softer, dark gray color for less contrast */
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 3px; /* Slightly more spacing to emphasize the text */
+    animation: slideIn 3s ease-out forwards, blink 1s step-end infinite; /* Adjusted the timing */
+    padding: 3px;
+    text-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.6), -1px -1px  20px  rgba(60, 10, 241, 0.8); /* Glow effect with a pink hue */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Cursor blinks */
+    }
+}
+
+.navbar{
+    display: flex;
+    gap: 20px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    
+}
+.search{
+    position: absolute;
+    right: 1.6%;
+    top: 29.5%;
+    padding: 1px;
+    background-color: white;
+    text-decoration: none;
+    border: none;
+}
+input{
+    padding: 5px;
+    padding-right: 30px;
+    border-radius: 10px;
+    width: 150px;
+   
+}
+/* Style for the navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Style for links in the navbar */
+.navbar a {
+  text-decoration: none;
+  color: #071ef5; /* Default color */
+  padding: 10px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.navbar a:hover {
+  color: #fcfdfd; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge the link on hover */
+  background-color: rgb(107, 109, 221);
+  border-radius: 15px;
+}
+
+/* Search input styles */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 5px;
+  color: #007bff;
+}
+
+/* Product card styles */
+.product-card {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-title {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.product-price {
+  font-size: 1em;
+  color: #007bff;
+  margin-top: 5px;
+}
+
+/* View More Button */
+.view-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-more-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-more-button:hover {
+  background-color: #0056b3;
+}
